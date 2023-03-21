@@ -15,9 +15,15 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
-    port: 8080,
-    hot: true
+    // static: path.resolve(__dirname, 'dist'),
+    // port: 8080,
+    // hot: true
+    compress: false,
+    host: "0.0.0.0",
+    port: 3000,
+  },
+  watchOptions: {
+    poll: 1000, // Check for changes every second
   },
   module: {
     rules: [
